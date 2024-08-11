@@ -1,0 +1,38 @@
+//The output is displayed in the console
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>De-scientist>>filterEvenNumbers</title>
+	<style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background-image: url('even.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+<body>
+
+    <script>
+        
+     function filterEvenNumbers(arr) {
+    return arr.filter(number => number % 2 === 0);
+    }
+
+    let userInputNumbers = prompt("Enter a list of numbers separated by commas:");
+
+    let numberArray = userInputNumbers.split(',').map(Number);
+
+    let evenNumbers = filterEvenNumbers(numberArray);
+
+    console.log(evenNumbers);
+
+    </script>
+</body>
+</html>
